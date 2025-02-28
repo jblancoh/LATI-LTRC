@@ -7,7 +7,7 @@ export function Logo({ className = "", size = "default" }) {
     large: "h-12",
   }
 
-  const heightClass = sizeClasses[size] || sizeClasses.default
+  const heightClass = sizeClasses[size as keyof typeof sizeClasses] || sizeClasses.default
 
   return (
     <div className={`flex items-center ${className}`}>
